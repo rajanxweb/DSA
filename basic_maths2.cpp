@@ -1,34 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-// reverse a number
-void reverseNum(int N){
-    while(N % 10 == 0){
-        N /=10;
-    }
-    int rem = 0;
-    int rev = 0;
-    while(N > 0)
-    {
-        rem = N % 10;
-        rev = rev * 10 + rem;
-        N /= 10;        
-    }
-    cout << rev;
-    
-} 
-
-
-//Count all Digits of a Number
-void countDigit(int n) {
-        int count = 0;
-        while(n > 0){
-            n /= 10;
-            count +=1;
-        }
-        cout << count;
-    
-    }
 
 void palindromeNum(int n){
     int rem = 0;
@@ -59,13 +30,38 @@ void palindromeNum(int n){
         cout << "false" << endl;
     }
 }
-
+void armstrongNum(int n){
+    int rem=0;
+    int cubeSum=0;
+    int nCheck = n;
+    while(n>0){
+        rem = n % 10;
+        cubeSum += rem*rem*rem;
+        n /= 10;
+    }
+    if(cubeSum == nCheck){
+        cout << nCheck << " is an armstrong num. "<< endl;
+    }
+    else{
+        cout << nCheck << " is not a armstrong num. "<< endl;
+    }
+}
+void countDivisior(int n){
+    int count = 0;
+    for(int i=1; i<=n; i++){
+        if(n %i == 0){
+            cout << i<< " ";
+            count++;
+        }
+    }
+    cout << endl;
+    cout <<"the total number of divisiors are: "<< count <<endl;
+}
 
 
 int main(){
     int N;
     cin>>N;
+    countDivisior(N);
 
 }
-
-
