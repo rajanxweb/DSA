@@ -80,6 +80,17 @@ public:
         newNode->next = temp->next;
         temp->next = newNode;
     }
+    void searchLL(int key){
+        Node* temp = head;
+        int count = 0;
+        while(temp != NULL){
+            if(temp->data == key){
+                cout << "Found key at position "<< count <<endl;
+            }
+            count++;
+            temp = temp->next;
+        }
+    }
 
 
     void printLL(){
@@ -108,5 +119,7 @@ int main(){
     ll.printLL();
     ll.insert(100, 3);
     ll.printLL();
+    ll.searchLL(100);
+
 
 }
