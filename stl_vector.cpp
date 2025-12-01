@@ -67,8 +67,4 @@ int main(){
     demo.pop_back();
     cout << *(demo.end()-1)<<" ";
 
-
-
-
-
 }

@@ -16,7 +16,4 @@ int main(){
     st1.push(5);
     st1.swap(st2);
     cout << st2.top() << endl;
-
-
-
 }

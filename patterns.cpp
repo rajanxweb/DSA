@@ -17,8 +17,7 @@ void print2(int n){
             cout <<" *";
         }
         cout << endl;
-    }
-    
+    }   
 }
 
 void print3(int n){
