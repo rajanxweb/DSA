@@ -49,7 +49,4 @@ int main(){
     dll.push_front(3);
     dll.push_front(4);
     dll.printDLL();
-
-    
-
 }
